@@ -11,7 +11,7 @@ public class FixedDifferencePairs {
 		int difference = scanner.nextInt();
 
 		System.out.println("Enter the "+noofIntegers+"  of integers :");
-		Integer[] integers = new Integer[noofIntegers];
+		int[] integers = new int[noofIntegers];
 		for(int i = 0;i<noofIntegers;i++){
 			integers[i] = scanner.nextInt();
 		}
@@ -19,7 +19,7 @@ public class FixedDifferencePairs {
 		System.out.println("number of pairs "+count);
 	}
 	
-	int findPair(Integer arr[], int size, int n){
+	int findPair(int arr[], int size, int n){
 		int counter = 0;
 	    for(int i =0;i<size;i++){
 	    	for(int j=1;j<size;j++){
