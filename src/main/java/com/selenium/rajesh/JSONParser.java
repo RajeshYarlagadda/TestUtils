@@ -11,7 +11,7 @@ import com.google.gson.JsonParser;
 public class JSONParser {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		FileReader reader = new FileReader("F:\\Workfiles\\FrogStore\\SiteTagApi\\output2.json");
+		FileReader reader = new FileReader("F:\\Workfiles\\FrogStore\\SiteTagApi\\output.json");
 		JsonParser parser = new JsonParser();
 		JsonObject object = (JsonObject) parser.parse(reader);
 		JsonArray arrayJ = (JsonArray)object.get("output");
