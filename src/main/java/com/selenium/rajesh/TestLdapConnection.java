@@ -17,13 +17,13 @@ public class TestLdapConnection {
  */
 public static void main(String[] args) throws NamingException {
     
-    final String ldapAdServer = "ldap://10.24.32.58:389";
-    final String ldapSearchBase = "dc=xchanging,dc=my,dc=local";
+    final String ldapAdServer = "";
+    final String ldapSearchBase = "";
     
-//    final String ldapUsername = "linuxldap@xchanging.my.local";
-//    final String ldapPassword = "Pa55word";
-    final String ldapUsername = "Rajesh.Babu@xchanging.my.local";
-    final String ldapPassword = "Rajesh26";
+//    final String ldapUsername = "";
+//    final String ldapPassword = "";
+    final String ldapUsername = "";
+    final String ldapPassword = "";
     final String ldapAccountToLookup = "Rajesh.Babu";
     
     try{
