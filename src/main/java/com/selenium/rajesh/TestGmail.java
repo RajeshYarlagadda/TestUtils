@@ -34,7 +34,7 @@ public class TestGmail {
     driver.findElement(By.id("Email")).clear();
     driver.findElement(By.id("Email")).sendKeys("mail4yrajesh");
     driver.findElement(By.id("Passwd")).clear();
-    driver.findElement(By.id("Passwd")).sendKeys("Ysrikanth26");
+    driver.findElement(By.id("Passwd")).sendKeys("");
     driver.findElement(By.id("PersistentCookie")).click();
     driver.findElement(By.id("signIn")).click();
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
