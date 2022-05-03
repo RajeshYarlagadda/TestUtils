@@ -1,0 +1,33 @@
+package com.samples.rajesh;
+
+import java.util.Arrays;
+
+public class FindMissingIntegerInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = { 1, 2, 3, 4, 5, 6,7, 8, 9, 10,11,12,13,15 };
+		 
+        System.out.println("The missing number is " + getMissingNumber(arr));
+	}
+	public static int getMissingNumber(int[] arr)
+    {
+        // get the array's length
+        int n = arr.length;
+ 
+        // the actual size is `n+1` since a number is missing from the array
+        int m = n + 1;
+ 
+        // get a sum of integers between 1 and `n+1`
+        int total = m * (m + 1) / 2;
+ 
+        // get an actual sum of integers in the array
+        int sum = Arrays.stream(arr).sum();
+ 
+        // the missing number is the difference between the expected sum
+        // and the actual sum
+        return total - sum;
+    }
+ 
+
+}
