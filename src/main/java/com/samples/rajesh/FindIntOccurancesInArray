@@ -1,0 +1,35 @@
+package com.samples.rajesh;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class FindIntOccurancesInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> list = new ArrayList<Integer>(Arrays.asList(1,4,3,4,5,6,3,7,78,9,6,10,8,10));// your input
+		 System.out.println(findOccurances(list));
+
+	}
+
+	static int findOccurances(List<Integer> list) {
+		int pair = 0;
+		
+
+		Set<Integer> uniqueSet = new HashSet<Integer>(list);
+		for (Integer temp : uniqueSet) {
+			System.out.println(temp + ": " + Collections.frequency(list, temp));
+
+			if (Collections.frequency(list, temp) == 2 || Collections.frequency(list, temp) > 2) {
+				int t = Collections.frequency(list, temp) / 2;
+				pair = pair + t;
+			}
+
+		}
+		return pair;
+	}
+}
