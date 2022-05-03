@@ -1,0 +1,46 @@
+package com.samples.rajesh;
+
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+/**
+ * Find the pairs whose sum is given.
+ * @author RajeshYarlagadda
+ * */
+public class FindPairsOfSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] nums = { 8, 7, 2, 5, 3, 1 };
+		System.out.println("Enter sum integer:");
+		int target = new Scanner(System.in).nextInt() ;
+
+		findPair(nums, target);
+
+	}
+
+	public static void findPair(int[] nums, int target) {
+		// create an empty HashMap
+		Map<Integer, Integer> map = new HashMap<>();
+
+		// do for each element
+		for (int i = 0; i < nums.length; i++) {
+			// check if pair (nums[i], target-nums[i]) exists
+
+			// if the difference is seen before, print the pair
+			if (map.containsKey(target - nums[i])) {
+				System.out.printf("Pair found (%d, %d)", nums[map.get(target - nums[i])], nums[i]);
+				return;
+			}
+
+			// store index of the current element in the map
+			map.put(nums[i], i);
+		}
+
+		// we reach here if the pair is not found
+		System.out.println("Pair not found");
+	}
+
+}
